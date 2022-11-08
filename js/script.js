@@ -80,14 +80,23 @@ console.log(carsWithParse);
 
 //--
 
+/**
+ * this is variables that i have made with queryselector and getelementbyID
+ * those variable belongs to localstorage functions
+ */
 const inPKey = document.getElementById("inputkey");
 const outKey = document.getElementById("inputvalue");
 const ctalocaLstorage = document.getElementById("cta-localstorage");
 const Isoutput = document.querySelector(".displayValue");
-// const getOuput = document.querySelector(".getValue");
 const clearBtn = document.getElementById("cta-localstorage_2");
 const getBtn = document.getElementById("cta-localstorage_3");
 
+/**
+ * button onclick function
+ * function onclick use this code for localstorage to get render in browser
+ * function get the prints the value as you save it to localstorage
+ * here i have use localstorage setItem("key", value)
+ */
 ctalocaLstorage.onclick = function () {
   const key = inPKey.value;
   const value = outKey.value;
