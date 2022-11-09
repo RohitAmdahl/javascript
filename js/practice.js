@@ -1,3 +1,4 @@
+//-----------------------------------------------------
 const person = {
   firstName: "Ola",
   lastName: "Nordmann",
@@ -30,3 +31,54 @@ function landObjects({
   console.log(fornavn, religion, clothes);
 }
 landObjects(Land);
+
+//-----------------------------------------------------
+const teams = [
+  {
+    teamsFootball: "bils",
+    score: 5,
+  },
+  {
+    teamsFootball: "bengals",
+    score: 10,
+  },
+  {
+    teamsFootball: "alenta",
+    score: 8,
+  },
+  {
+    teamsFootball: "arizona",
+    score: 12,
+  },
+  {
+    teamsFootball: "viking",
+    score: 2,
+  },
+  {
+    teamsFootball: "falcons",
+    score: 4,
+  },
+];
+console.log(teams);
+const winner = teams.filter(({ score }) => {
+  if (score >= 8) {
+    console.log(score);
+    return true;
+  }
+
+  function createHtml() {
+    const listOfScore = document.querySelector(".list");
+    listOfScore.innerHTML += `<ul>
+                            <li>${score}</li>
+                             </ul>`;
+  }
+  createHtml();
+});
+
+//-----------------------------------------------------
+const names = ["rohit", "chinu", "raja", "pizza"];
+
+const [name0, name1, ...rest] = names;
+console.log(name0, name1);
+console.log(rest);
+//-----------------------------------------------------
