@@ -108,10 +108,7 @@ for (const item of mySet) {
 
 //..-------------------------practical 1 ---
 class items {
-  constructor(fruit1, fruit2) {
-    this.fruit1 = fruit1;
-    this.fruit2 = fruit2;
-  }
+  constructor(fruit1, fruit2) {}
   eatIng() {
     console.log(`i m eating ${this.fruit1} and ${this.fruit2}`);
   }

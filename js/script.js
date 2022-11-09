@@ -109,7 +109,7 @@ ctalocaLstorage.onclick = function () {
 for (let i = 0; i < localStorage.length; i++) {
   const key = localStorage.key(i);
   const value = localStorage.getItem(key);
-  Isoutput.innerHTML += `${key}: ${value} <br/>`;
+  Isoutput.innerHTML += `${key} : ${value} <br/>`;
 }
 
 clearBtn.onclick = function () {
@@ -126,9 +126,13 @@ const pet = {
 };
 
 const dog = JSON.stringify(pet); //... first json stringify
-localStorage.setItem("deg breed", dog); //.. set item from
-const petRetrieved = localStorage.getItem("dog");
+localStorage.setItem("animal", dog); //.. set item from
+const petRetrieved = localStorage.getItem("animal");
 console.log(petRetrieved);
 
-const newDog = JSON.parse(petRetrieved);
+const newDog = JSON.parse(petRetrieved); // json.parse
 console.log(newDog);
+console.log(newDog.name);
+console.log(newDog.type);
+console.log(newDog.age);
+console.log(newDog.breed);
