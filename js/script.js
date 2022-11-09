@@ -126,8 +126,9 @@ const pet = {
 };
 
 const dog = JSON.stringify(pet); //... first json stringify
-//localStorage.setItem("dog", dog); //.. set item from
-const petRetrived = localStorage.getItem("petRetrived");
-console.log(petRetrived);
+localStorage.setItem("deg breed", dog); //.. set item from
+const petRetrieved = localStorage.getItem("dog");
+console.log(petRetrieved);
 
-const newDog = JSON.parse(petRetrived);
+const newDog = JSON.parse(petRetrieved);
+console.log(newDog);
