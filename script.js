@@ -68,13 +68,15 @@ console.log(colorOFcars);
 const cars = JSON.stringify(colorOFcars); //.. json stringify
 console.log(cars);
 
+localStorage.setItem("brands", cars); //- here i am saving array to local storage
+
 const carsWithParse = JSON.parse(cars); // parse the stringify object into parse like u see in the example
 console.log(carsWithParse);
 
 //---
 
-// const data = localStorage.setItem("name", "rohit");
-// console.log(data);
+const data = localStorage.setItem("name", "rohit");
+console.log(data);
 // const get = localStorage.getItem("name");
 // console.log(get);
 
