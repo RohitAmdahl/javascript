@@ -7,7 +7,6 @@ heading.className = "javascript";
 console.log(heading);
 
 /**
- *
  * this function will add two numbers
  * this will add for example 2 + 2 = 4
  * addNumber a and b
@@ -21,7 +20,6 @@ console.log(heading);
  * // returning sum of the number
  * // 13
  * ```
- *
  */
 
 function addNumbers(a, b) {
@@ -127,6 +125,7 @@ const pet = {
 
 const dog = JSON.stringify(pet); //... first json stringify
 localStorage.setItem("animal", dog); //.. set item from
+
 const petRetrieved = localStorage.getItem("animal");
 console.log(petRetrieved);
 
@@ -136,3 +135,30 @@ console.log(newDog.name);
 console.log(newDog.type);
 console.log(newDog.age);
 console.log(newDog.breed);
+
+const card = [
+  {
+    id: 01,
+    work: "cleaning",
+    name: "john",
+  },
+  {
+    id: 02,
+    work: "designer",
+    name: "olav",
+  },
+];
+
+const names = [
+  { firstName: "Ola", lastName: "Nordmann" },
+  { firstName: "John", lastName: "Doe" },
+  { firstName: "Mario", lastName: "Rossi" },
+  { firstName: "Jan", lastName: "Jansen" },
+];
+
+// Returns:
+// [ "Ola Nordmann", "John Doe", "Mario Rossi", "Jan Jansen" ]
+const combinedNames = names.map((person) => {
+  return `${person.firstName} ${person.lastName}`;
+});
+console.log(combinedNames);

@@ -60,20 +60,24 @@ const teams = [
   },
 ];
 console.log(teams);
+
 const winner = teams.filter(({ score }) => {
-  if (score >= 8) {
+  if (score >= 6) {
     console.log(score);
     return true;
   }
+});
 
-  function createHtml() {
-    const listOfScore = document.querySelector(".list");
+function createHtml() {
+  const listOfScore = document.querySelector(".list");
+  for (let i = 0; i < winner.length; i++) {
+    const element = winner[i];
     listOfScore.innerHTML += `<ul>
-                            <li>${score}</li>
+                            <li>${element.score}</li>
                              </ul>`;
   }
-  createHtml();
-});
+}
+createHtml();
 
 //-----------------------------------------------------
 const names = ["rohit", "chinu", "raja", "pizza"];
