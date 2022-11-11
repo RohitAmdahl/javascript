@@ -158,7 +158,8 @@ const names = [
 
 // Returns:
 // [ "Ola Nordmann", "John Doe", "Mario Rossi", "Jan Jansen" ]
-const combinedNames = names.map((person) => {
-  return `${person.firstName} ${person.lastName}`;
+const combinedNames = names.map((person, index) => {
+  console.log(person, index);
+  return ` hello you Boy ${person.firstName} ${person.lastName} are you good?`;
 });
 console.log(combinedNames);
