@@ -122,3 +122,76 @@ const newUser = new items("namgo", "pineapples");
 
 newUser.eatIng();
 //---------------------------practical 2--
+
+// const value = [2, 5, 4, 10, 50, 100, 58, 65, 78, 84, 95, 63, 20, 15, 14, 54, 3];
+const products = [
+  {
+    name: "Apple",
+    itemsInStock: 10,
+    price: 5.99,
+  },
+  {
+    name: "Banana",
+    itemsInStock: 5,
+    price: 3.99,
+  },
+  {
+    name: "Orange",
+    itemsInStock: 2,
+    price: 3.99,
+  },
+];
+const addIng = products.reduce((totalNumber, cost) => {
+  totalNumber += cost.price;
+  return totalNumber;
+}, 0);
+
+console.log(addIng);
+
+/*
+Exercise 3: Turn an array of values into a set of object keys
+
+Store a team's score in an object, using the team's name as the key. Only
+store the score if they were a winner ('isWinner').
+
+An array of teams ('teams') has been provided for it. Each item is an object
+with the the teams's name ('name'), the team's score ('score') and if they
+were a winner ('isWinner')
+
+Tip: Set the initial value as an empty object {}
+
+Tip: Use square brackets to set the teams name
+
+Tip: Use 'toLowerCase()' when setting the team's key
+
+*/
+const players = [
+  {
+    name: "Hawks",
+    score: 60,
+    isWinner: true,
+  },
+  {
+    name: "Dolphins",
+    score: 50,
+    isWinner: true,
+  },
+  {
+    name: "Falcons",
+    score: 90,
+    isWinner: false,
+  },
+  {
+    name: "Bears",
+    score: 90,
+    isWinner: false,
+  },
+];
+
+const teamWinner = players.reduce((teams, { name, score, isWinner }) => {
+  if (isWinner) {
+    teams[name.toLowerCase()] = score;
+  }
+  return teams;
+}, {});
+console.log(teamWinner);

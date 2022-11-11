@@ -163,3 +163,21 @@ const combinedNames = names.map((person, index) => {
   return ` hello you Boy ${person.firstName} ${person.lastName} are you good?`;
 });
 console.log(combinedNames);
+
+const values = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 50];
+// const count = values.push("cows");
+// console.log(count);
+console.log(values);
+const numberArray = values.reduce((total, currentNumber) => {
+  console.log(total, currentNumber);
+  total += currentNumber;
+  return total;
+}, 0);
+console.log(numberArray);
+
+const filterValue = values.filter((value) => {
+  if (value <= 40) {
+    return value;
+  }
+});
+console.log(filterValue);
