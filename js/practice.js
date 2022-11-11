@@ -195,3 +195,32 @@ const teamWinner = players.reduce((teams, { name, score, isWinner }) => {
   return teams;
 }, {});
 console.log(teamWinner);
+
+const card = [
+  {
+    id: 01,
+    work: "cleaner",
+    name: "john",
+  },
+  {
+    id: 02,
+    work: "designer",
+    name: "olav",
+  },
+  {
+    id: 03,
+    work: "guard",
+    name: "rita",
+  },
+];
+
+const cardArray = card.map((value) => `I am ${value.name}`);
+console.log(cardArray);
+
+const newArray = cardArray.filter((person) => {
+  if (person.work === "designer") {
+    return true;
+  }
+});
+
+console.log(newArray);
