@@ -224,3 +224,36 @@ const newArray = cardArray.filter((person) => {
 });
 
 console.log(newArray);
+
+const people = [
+  {
+    firstName: "Ola",
+    lastName: "Nordmann",
+    score: 8,
+    value: true,
+  },
+  {
+    firstName: "Kari",
+    lastName: "Nordmann",
+    score: 9,
+    value: true,
+  },
+  {
+    firstName: "Joakim",
+    lastName: "Nordmann",
+    score: 4,
+    value: false,
+  },
+];
+
+const newPeople = people.reduce(
+  (acc, { firstName, lastName, score, value }) => {
+    console.log(acc, { firstName });
+    if (value === true) {
+      acc[firstName.toLowerCase()] = score;
+    }
+    return acc;
+  },
+  {}
+);
+console.log(newPeople);
