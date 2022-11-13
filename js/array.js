@@ -144,3 +144,18 @@ ctaArchitecture.addEventListener("click", (e) => {
     return true;
   });
 });
+
+ctaDesignIng.addEventListener("click", (e) => {
+  card.filter((element) => {
+    if (element.Design === "code") {
+      box.innerHTML += ` <div class="cards">
+                      <div class="box">
+                        <img src="${element.img}" alt="" />
+                        <p>${element.name}</p>
+                        <p> ${element.id}</p>
+                      </div>
+                    </div>`;
+    }
+    return true;
+  });
+});
