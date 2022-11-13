@@ -136,19 +136,6 @@ console.log(newDog.type);
 console.log(newDog.age);
 console.log(newDog.breed);
 
-const card = [
-  {
-    id: 01,
-    work: "cleaning",
-    name: "john",
-  },
-  {
-    id: 02,
-    work: "designer",
-    name: "olav",
-  },
-];
-
 const names = [
   { firstName: "Ola", lastName: "Nordmann" },
   { firstName: "John", lastName: "Doe" },

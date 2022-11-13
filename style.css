@@ -7,6 +7,28 @@
   margin: 0 auto;
   padding: 25px;
 }
+
+.box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr auto;
+  max-width: 1200px;
+  margin: 0 auto;
+  grid-gap: 12px;
+  margin: 20px;
+}
+
+.box_1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr auto;
+  max-width: 1200px;
+  margin: 0 auto;
+  grid-gap: 12px;
+  margin: 20px;
+}
+
+.cards {
+}
+
 nav a {
   font-size: 20px;
   font-weight: bold;
@@ -55,7 +77,9 @@ nav a {
   margin-left: 25px;
   color: rgb(34, 32, 32);
 }
-
+#search {
+  margin: 25px;
+}
 input {
   padding: 15px;
   width: 100%;
