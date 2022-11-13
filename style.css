@@ -17,6 +17,12 @@
   margin: 20px;
 }
 
+.center {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
 .box_1 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr auto;

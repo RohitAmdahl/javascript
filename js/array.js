@@ -50,6 +50,7 @@ const card = [
     img: "/imgs/html.png",
     isDesign: false,
     isTechnical: "20",
+    Design: "code",
   },
   {
     id: 8,
@@ -141,21 +142,31 @@ ctaArchitecture.addEventListener("click", (e) => {
                       </div>
                     </div>`;
     }
-    return true;
   });
 });
 
 ctaDesignIng.addEventListener("click", (e) => {
+  card.filter((element) => {
+    if (element.isDesign === true) {
+      box.innerHTML += ` <div class="cards">
+                      <div class="box">
+                        <img src="${element.img}" alt="" />
+                        <p>${element.name}</p>
+                      </div>
+                    </div>`;
+    }
+  });
+});
+
+ctaCoding.addEventListener("click", (e) => {
   card.filter((element) => {
     if (element.Design === "code") {
       box.innerHTML += ` <div class="cards">
                       <div class="box">
                         <img src="${element.img}" alt="" />
                         <p>${element.name}</p>
-                        <p> ${element.id}</p>
                       </div>
                     </div>`;
     }
-    return true;
   });
 });
