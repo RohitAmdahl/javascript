@@ -4,32 +4,27 @@
 
 const card = [
   {
-    id: 1,
     name: "Wordpress",
     img: "/imgs/_wordpress.png",
     isDesign: true,
   },
   {
-    id: 2,
     name: "Adobe XD",
     img: "/imgs/adobe-xd.png",
     isDesign: true,
   },
   {
-    id: 3,
     name: "Archicad",
     img: "/imgs/archicad.png",
     isDesign: false,
     Design: "architectural",
   },
   {
-    id: 4,
     name: "blender",
     img: "/imgs/blender.png",
     isDesign: true,
   },
   {
-    id: 5,
     name: "Css",
     img: "/imgs/css.png",
     isDesign: true,
@@ -37,7 +32,6 @@ const card = [
   },
 
   {
-    id: 6,
     name: "Enscape",
     img: "/imgs/enscape.png",
     Design: "architectural",
@@ -45,7 +39,6 @@ const card = [
   },
 
   {
-    id: 7,
     name: "Html",
     img: "/imgs/html.png",
     isDesign: false,
@@ -53,54 +46,46 @@ const card = [
     Design: "code",
   },
   {
-    id: 8,
     name: "Adobe illustrator",
     img: "/imgs/illustrator.png",
     isDesign: true,
   },
   {
-    id: 9,
     name: "Javascript",
     img: "/imgs/javascript.png",
     isDesign: false,
     Design: "code",
   },
   {
-    id: 10,
     name: "Adobe Photo shop",
     img: "/imgs/photoshop.png",
     isDesign: true,
   },
   {
-    id: 11,
     name: "Revit Architecture",
     img: "/imgs/revit.png",
     isDesign: false,
     Design: "architectural",
   },
   {
-    id: 12,
     name: "BIM Solibri",
     img: "/imgs/solibri.png",
     isDesign: false,
     Design: "architectural",
   },
   {
-    id: 13,
     name: "Twinmotion",
     img: "/imgs/twinmotion.png",
     isDesign: false,
     Design: "architectural",
   },
   {
-    id: 14,
     name: "Visual studio code",
     img: "/imgs/vscode.png",
     isDesign: false,
     Design: "code",
   },
   {
-    id: 15,
     name: "Autocad",
     img: "/imgs/autocad.png",
     isDesign: false,
@@ -189,22 +174,13 @@ const students = [
   { name: "Sarah", score: 93, position: "2th" },
 ];
 
-students.forEach((element, index) => {
-  reduce_1.innerHTML += ` <div class="cards">
-                      <div class="box">
-                        <p>${element.name}</p>
-                        <p>${element.score}</p>
-                        <p>${element.position}</p>
-                      </div>
-                    </div>`;
-});
-
 ctaReduce.addEventListener("click", (e) => {
-  const value = students.reduce((acc, { name, score, position }) => {
-    if (name) {
-      acc[name.toLowerCase()] = position;
+  const value = students.reduce((candidate, { score, name, position }) => {
+    if (position) {
     }
-    return acc;
+    candidate[candidate.name] = score;
+    return candidate;
   }, {});
+
   console.log(value);
 });

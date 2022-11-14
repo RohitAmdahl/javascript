@@ -257,3 +257,15 @@ const newPeople = people.reduce(
   {}
 );
 console.log(newPeople);
+console.log("object");
+
+/**
+ * find function
+ */
+// const student = people.find((element, index) => {
+//   if (element.score < 2) {
+//   }
+//   return element.score;
+// });
+
+// console.log(student);
