@@ -166,21 +166,40 @@ ctaCoding.addEventListener("click", (e) => {
 });
 
 const students = [
-  { name: "Kingsley", score: 70, position: "6th" },
-  { name: "Jack", score: 80, position: "2th" },
-  { name: "Joe", score: 63, position: "5th" },
-  { name: "Beth", score: 75, position: "8th" },
-  { name: "Kareem", score: 59, position: "1th" },
-  { name: "Sarah", score: 93, position: "2th" },
+  { name: "Kingsley", score: "70", position: "6th" },
+  { name: "Jack", score: "80", position: "2th" },
+  { name: "Joe", score: "63", position: "5th" },
+  { name: "Beth", score: "75", position: "8th" },
+  { name: "Kareem", score: "59", position: "1th" },
+  { name: "Sarah", score: "93", position: "2th" },
 ];
 
-ctaReduce.addEventListener("click", (e) => {
-  const value = students.reduce((candidate, { score, name, position }) => {
-    if (position) {
+ctaMap.addEventListener("click", (e) => {
+  const value = students.map((candidate, currentPosition) => {
+    console.log(candidate);
+    if (candidate.score) {
     }
-    candidate[candidate.name] = score;
-    return candidate;
-  }, {});
+    return parseFloat(candidate.score * 2);
+  });
 
   console.log(value);
 });
+
+value.forEach((elementScore) => {});
+/*
+Exercise 3: Turn an array of values into a set of object keys
+
+Store a team's score in an object, using the team's name as the key. Only
+store the score if they were a winner ('isWinner').
+
+An array of teams ('teams') has been provided for it. Each item is an object
+with the the team's name ('name'), the team's score ('score') and if they
+were a winner ('isWinner')
+
+Tip: Set the initial value as an empty object {}
+
+Tip: Use square brackets to set the teams name
+
+Tip: Use 'toLowerCase()' when setting the team's key
+
+*/
