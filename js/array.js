@@ -166,26 +166,42 @@ ctaCoding.addEventListener("click", (e) => {
 });
 
 const students = [
-  { name: "Kingsley", score: "70", position: "6th" },
-  { name: "Jack", score: "80", position: "2th" },
-  { name: "Joe", score: "63", position: "5th" },
-  { name: "Beth", score: "75", position: "8th" },
-  { name: "Kareem", score: "59", position: "1th" },
-  { name: "Sarah", score: "93", position: "2th" },
+  { name: "Kingsley", score: 70, position: true },
+  { name: "Jack", score: 80, position: false },
+  { name: "Joe", score: 63, position: true },
+  { name: "Beth", score: 75, position: false },
+  { name: "Kareem", score: 59, position: true },
+  { name: "Sarah", score: 93, position: true },
 ];
-
-ctaMap.addEventListener("click", (e) => {
-  const value = students.map((candidate, currentPosition) => {
-    console.log(candidate);
-    if (candidate.score) {
+ctaReduce.addEventListener("click", (e) => {
+  const value = students.reduce((candidate, { name, score, position }) => {
+    if (position) {
+      candidate[name.toLowerCase()] = score;
     }
-    return parseFloat(candidate.score * 2);
+    return candidate;
+  }, {});
+  students.forEach((candidate) => {
+    reduce_1.innerHTML += `
+                    <div class="wrapper">
+                      <div class="cards">
+                       <div class="box">
+                        <p>${candidate.name}</p>
+                        <p>${candidate.score}</p>
+                       </div>
+                      </div>
+                    </div>`;
   });
-
   console.log(value);
 });
 
-value.forEach((elementScore) => {});
+// const team = students.reduce((currentValue, isWinner) => {
+//   if (currentValue.position) {
+//     currentValue[isWinner.name.toLowerCase()] = isWinner.score;
+//   }
+//   return currentValue;
+// }, {});
+
+// console.log(team);
 /*
 Exercise 3: Turn an array of values into a set of object keys
 
