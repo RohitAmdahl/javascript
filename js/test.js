@@ -6,21 +6,12 @@ const students = [
   { name: "Kareem", score: 59, position: true },
   { name: "Sarah", score: 93, position: true },
 ];
-// ctaReduce.addEventListener("click", (e) => {
-//   const value = students.reduce((candidate, { name, score, position }) => {
-//     if (position) {
-//       candidate[name.toLowerCase()] = score;
-//     }
-//     return candidate;
-//   }, {});
-//   console.log(value);
-// });
 
-const team = students.reduce((current, isWinner) => {
-  if (current.position) {
-    isWinner[current.name.toLowerCase()] = isWinner.score;
+const team = students.reduce((acc, isWinner) => {
+  if (acc.position) {
+    isWinner[acc.name.toLowerCase()] = isWinner.score;
   }
-  return current;
+  return acc;
 });
 
 console.log(team);
