@@ -168,7 +168,7 @@ ctaCoding.addEventListener("click", (e) => {
 const students = [
   { name: "Kingsley", score: 70, position: true },
   { name: "Jack", score: 80, position: false },
-  { name: "Joe", score: 63, position: true },
+  { name: "Joe", score: 63, position: false },
   { name: "Beth", score: 75, position: false },
   { name: "Kareem", score: 59, position: true },
   { name: "Sarah", score: 93, position: true },
@@ -180,28 +180,17 @@ ctaReduce.addEventListener("click", (e) => {
     }
     return candidate;
   }, {});
-  students.forEach((candidate) => {
-    reduce_1.innerHTML += `
-                    <div class="wrapper">
-                      <div class="cards">
-                       <div class="box">
-                        <p>${candidate.name}</p>
-                        <p>${candidate.score}</p>
-                       </div>
-                      </div>
-                    </div>`;
-  });
   console.log(value);
 });
 
-// const team = students.reduce((currentValue, isWinner) => {
-//   if (currentValue.position) {
-//     currentValue[isWinner.name.toLowerCase()] = isWinner.score;
-//   }
-//   return currentValue;
-// }, {});
+const team = students.reduce((current, isWinner) => {
+  if (current.position) {
+    isWinner[currentValue.name.toLowerCase()] = isWinner.score;
+  }
+  return currentValue;
+});
 
-// console.log(team);
+console.log(team);
 /*
 Exercise 3: Turn an array of values into a set of object keys
 
