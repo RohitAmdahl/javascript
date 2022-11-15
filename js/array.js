@@ -173,38 +173,20 @@ const students = [
   { name: "Kareem", score: 59, position: true },
   { name: "Sarah", score: 93, position: true },
 ];
+
 ctaReduce.addEventListener("click", (e) => {
-  const value = students.reduce((candidate, { name, score, position }) => {
-    if (position) {
-      candidate[name.toLowerCase()] = score;
-    }
-    return candidate;
-  }, {});
-  console.log(value);
+  const team = students
+    .filter((student) => {
+      if (student.position === true) {
+      }
+      return student.position;
+    })
+    .forEach((student) => {
+      reduce_1.innerHTML += `<div class="cards">
+                  <div class="box">
+                    <p>${student.name}</p>
+                    <p>${student.position}</p>
+                  </div>
+                </div>`;
+    });
 });
-
-const team = students.reduce((acc, isWinner) => {
-  if (acc.position) {
-    isWinner[acc.name.toLowerCase()] = isWinner.score;
-  }
-  return acc;
-});
-
-console.log(team);
-/*
-Exercise 3: Turn an array of values into a set of object keys
-
-Store a team's score in an object, using the team's name as the key. Only
-store the score if they were a winner ('isWinner').
-
-An array of teams ('teams') has been provided for it. Each item is an object
-with the the team's name ('name'), the team's score ('score') and if they
-were a winner ('isWinner')
-
-Tip: Set the initial value as an empty object {}
-
-Tip: Use square brackets to set the teams name
-
-Tip: Use 'toLowerCase()' when setting the team's key
-
-*/
