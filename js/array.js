@@ -183,11 +183,11 @@ ctaReduce.addEventListener("click", (e) => {
   console.log(value);
 });
 
-const team = students.reduce((current, isWinner) => {
-  if (current.position) {
-    isWinner[current.name.toLowerCase()] = isWinner.score;
+const team = students.reduce((acc, isWinner) => {
+  if (acc.position) {
+    isWinner[acc.name.toLowerCase()] = isWinner.score;
   }
-  return current;
+  return acc;
 });
 
 console.log(team);
