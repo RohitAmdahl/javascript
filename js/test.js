@@ -7,11 +7,11 @@ const students = [
   { name: "Sarah", score: 93, position: true },
 ];
 
-const team = students.reduce((acc, isWinner) => {
-  if (acc.position) {
-    isWinner[acc.name.toLowerCase()] = isWinner.score;
+const team = students.reduce((acc, student) => {
+  if (student.position) {
+    acc[student.name.toLowerCase()] = student.score;
   }
   return acc;
-});
+}, {});
 
 console.log(team);
