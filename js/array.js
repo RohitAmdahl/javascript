@@ -2,7 +2,7 @@
  * array method practice with function
  */
 
-const card = [
+const cards = [
   {
     name: "Wordpress",
     img: "/imgs/_wordpress.png",
@@ -93,77 +93,9 @@ const card = [
   },
 ];
 
-const box = document.querySelector(".box");
-const reduce_1 = document.querySelector(".reduce_1");
-const map_1 = document.querySelector(".map_1");
-
 //--buttons selection
-const buttonAll = document.querySelector(".all");
-const ctaArchitecture = document.querySelector(".archi");
-const ctaDesignIng = document.querySelector(".design");
-const ctaCoding = document.querySelector(".coding");
 const ctaReduce = document.querySelector(".reduce");
-const ctaMap = document.querySelector(".map");
 //--buttons selection
-
-function showResult() {}
-showResult();
-buttonAll.addEventListener("click", () => {
-  box.innerHTML = "";
-  card.forEach((cardsItems) => {
-    box.innerHTML += ` <div class="cards">
-                      <div class="box">
-                        <img src="${cardsItems.img}" alt="" />
-                        <p>${cardsItems.name}</p>
-                      </div>
-                    </div>`;
-  });
-});
-
-ctaArchitecture.addEventListener("click", (e) => {
-  box.innerHTML = "";
-  e.preventDefault();
-  card.filter((element) => {
-    if (element.Design === "architectural") {
-      box.innerHTML += ` <div class="cards">
-                      <div class="box">
-                        <img src="${element.img}" alt="" />
-                        <p>${element.name}</p>
-                      </div>
-                    </div>`;
-    }
-  });
-});
-
-ctaDesignIng.addEventListener("click", (e) => {
-  box.innerHTML = "";
-  e.preventDefault();
-  card.filter((element) => {
-    if (element.isDesign === true) {
-      box.innerHTML += ` <div class="cards">
-                      <div class="box">
-                        <img src="${element.img}" alt="" />
-                        <p>${element.name}</p>
-                      </div>
-                    </div>`;
-    }
-  });
-});
-
-ctaCoding.addEventListener("click", (e) => {
-  box.innerHTML = "";
-  e.preventDefault();
-  card.filter((element) => {
-    if (element.Design === "code") {
-      box.innerHTML += ` <div class="cards">
-                      <div class="box">
-                        <img src="${element.img}" alt="" />
-                        <p>${element.name}</p>
-                      </div>
-                    </div>`;
-    }
-  });
-});
 
 const students = [
   { name: "Kingsley", score: 70, position: true },
@@ -181,7 +113,9 @@ ctaReduce.addEventListener("click", (e) => {
       }
       return student.position;
     })
+
     .forEach((student) => {
+      const reduce_1 = document.querySelector(".box");
       reduce_1.innerHTML += `<div class="cards">
                   <div class="box">
                     <p>${student.name}</p>
@@ -190,3 +124,46 @@ ctaReduce.addEventListener("click", (e) => {
                 </div>`;
     });
 });
+
+// const buttons = document.querySelectorAll("#buttonContainer button");
+// //---------------------
+// buttons.forEach((button) => {
+//   button.addEventListener("click", filterCards);
+// });
+// //.......................
+
+// //--------------------------
+// function filterCards(event) {
+//   const { category } = event.target.dataset;
+
+//   const filteredCards = cards.filter((card) => {
+//     if (category === "all") {
+//       return true;
+//     }
+
+//     if (category === "design") {
+//       return card.isDesign;
+//     }
+
+//     return card.Design === category;
+//   });
+//   displayCards(filteredCards);
+// }
+// //.-----------------------------------
+
+// function displayCards(cards) {
+//   const box = document.querySelector(".box");
+
+//   box.innerHTML = "";
+
+//   cards.forEach((card) => {
+//     box.innerHTML += `<div class="cards">
+//                       <div class="box">
+//                         <img src="${card.img}" alt="" />
+//                         <p>${card.name}</p>
+//                       </div>
+//                     </div>`;
+//   });
+// }
+
+// displayCards(cards);
