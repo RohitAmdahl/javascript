@@ -247,7 +247,6 @@ const people = [
 ];
 console.log("object");
 
-console.log(student);
 //
 console.log("object");
 const newPeople = people.reduce(
@@ -261,3 +260,9 @@ const newPeople = people.reduce(
   {}
 );
 console.log(newPeople);
+
+//....
+
+const parameterString = window.location.search;
+const searchParameters = new URLSearchParams(parameterString);
+console.log(searchParameters);
