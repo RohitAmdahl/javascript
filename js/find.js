@@ -54,3 +54,41 @@ const course = modules.find((element, index) => {
   }
 });
 console.log(course);
+
+function createPerson(firstName, lastName, country, city) {
+  return {
+    firstName: firstName,
+    lastName: lastName,
+    address: {
+      country: country,
+      city: city,
+    },
+    greet: function () {
+      console.log(
+        `Hello, I am ${this.firstName} ${this.lastName} ${this.citys}.`
+      );
+    },
+  };
+}
+
+const ola = createPerson("Ola", "Nordmann", "Norway", "Oslo");
+ola.greet();
+
+function CreateAnimal(name, type, eat) {
+  return {
+    name: name,
+    type: type,
+    eat: eat,
+    IsEating: {
+      eat: eat,
+    },
+    anima: function () {
+      console.log(
+        `voff, I am ${this.name} i am  ${this.type} and only eats ${this.eat}.`
+      );
+    },
+  };
+}
+
+const animal = CreateAnimal("rex", "DOG", "dog food");
+animal.anima();

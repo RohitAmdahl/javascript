@@ -125,45 +125,48 @@ ctaReduce.addEventListener("click", (e) => {
     });
 });
 
-// const buttons = document.querySelectorAll("#buttonContainer button");
-// //---------------------
-// buttons.forEach((button) => {
-//   button.addEventListener("click", filterCards);
-// });
-// //.......................
+const buttons = document.querySelectorAll("#buttonContainer button");
+//---------------------
+buttons.forEach((button) => {
+  button.addEventListener("click", filterCards);
+});
+//.......................
 
-// //--------------------------
-// function filterCards(event) {
-//   const { category } = event.target.dataset;
+//--------------------------
+function filterCards(event) {
+  const { category } = event.target.dataset;
 
-//   const filteredCards = cards.filter((card) => {
-//     if (category === "all") {
-//       return true;
-//     }
+  const filteredCards = cards.filter((card) => {
+    if (category === "all") {
+      return true;
+    }
 
-//     if (category === "design") {
-//       return card.isDesign;
-//     }
+    if (category === "design") {
+      return card.isDesign;
+    }
+    console.log(card);
 
-//     return card.Design === category;
-//   });
-//   displayCards(filteredCards);
-// }
-// //.-----------------------------------
+    return card.Design === category;
+  });
+  displayCards(filteredCards);
+  console.log(filteredCards);
+}
 
-// function displayCards(cards) {
-//   const box = document.querySelector(".box");
+//.-----------------------------------
 
-//   box.innerHTML = "";
+function displayCards(cards) {
+  const box = document.querySelector(".box");
 
-//   cards.forEach((card) => {
-//     box.innerHTML += `<div class="cards">
-//                       <div class="box">
-//                         <img src="${card.img}" alt="" />
-//                         <p>${card.name}</p>
-//                       </div>
-//                     </div>`;
-//   });
-// }
+  box.innerHTML = "";
 
-// displayCards(cards);
+  cards.forEach((card) => {
+    box.innerHTML += `<div class="cards">
+                      <div class="box">
+                        <img src="${card.img}" alt="" />
+                        <p>${card.name}</p>
+                      </div>
+                    </div>`;
+  });
+}
+
+displayCards(cards);
