@@ -74,21 +74,21 @@ function createPerson(firstName, lastName, country, city) {
 const ola = createPerson("Ola", "Nordmann", "Norway", "Oslo");
 ola.greet();
 
-function CreateAnimal(name, type, eat) {
+function CreateAnimal(name, type, eat, playing) {
   return {
     name: name,
     type: type,
     eat: eat,
     IsEating: {
-      eat: eat,
+      playing: playing,
     },
     anima: function () {
       console.log(
-        `voff, I am ${this.name} i am  ${this.type} and only eats ${this.eat}.`
+        `voff, I am ${this.name} i am , ${this.type} and only eats ${this.eat} playing with ${this.IsEating.playing}.`
       );
     },
   };
 }
 
-const animal = CreateAnimal("rex", "DOG", "dog food");
+const animal = CreateAnimal("rex", "DOG", "dog food", "ball");
 animal.anima();
