@@ -92,3 +92,17 @@ function CreateAnimal(name, type, eat, playing) {
 
 const animal = CreateAnimal("rex", "DOG", "dog food", "ball");
 animal.anima();
+//...........
+
+//----------------------
+var myModule = (() => {
+  "use strict";
+
+  return {
+    publicMethod: () => {
+      console.log("Hello World!");
+    },
+  };
+})();
+
+myModule.publicMethod();
