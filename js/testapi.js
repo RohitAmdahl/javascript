@@ -8,29 +8,34 @@ newCard.className = "card-body";
 
 const NameOfTittle = document.createElement("h5");
 NameOfTittle.className = "card-title";
+NameOfTittle.innerText = "hello word";
 const subtitle = document.createElement("h6");
+subtitle.innerText = "name of man";
 subtitle.classList.add("card-subtitle", "mb-2", "text-muted");
 const paraGraph_text = document.createElement("p");
 paraGraph_text.className = "card-text";
+
+paraGraph_text.innerText = "hello this is my text ";
+
 const img = document.createElement("img");
+// img.setAttribute("src");
 img.classList.add("d-flex", "img-thumbnail", "p-2", "mb-2 ");
 const span = document.createElement("span");
 span.className = "numbers";
 const button = document.createElement("button");
 button.className = "cta_btn";
+button.innerText = "comment";
+console.log(button);
 
-function add() {
-  card.appendChild(image);
-  image.appendChild(newCard);
-  newCard.appendChild(NameOfTittle);
-  newCard.appendChild(subtitle);
-  newCard.appendChild(paraGraph_text);
-  newCard.appendChild(img);
-  newCard.appendChild(span);
-  newCard.appendChild(button);
-}
-add();
-console.log(add());
+card.appendChild(image);
+image.appendChild(newCard);
+newCard.appendChild(NameOfTittle);
+newCard.appendChild(subtitle);
+newCard.appendChild(paraGraph_text);
+newCard.appendChild(img);
+newCard.appendChild(span);
+newCard.appendChild(button);
+
 // const row = document.querySelector("div.row");
 // console.log(row);
 
