@@ -55,4 +55,62 @@ cardItem.appendChild(paraGraph_text);
 cardItem.appendChild(img);
 cardItem.appendChild(span);
 
-^[\w]+$
+^ [\w] + $
+
+
+      Div_container.appendChild(background);
+      background.appendChild(item_center);
+      item_center.appendChild(profile_img);
+      item_center.appendChild(profile_name);
+      item_center.appendChild(email);
+      item_center.appendChild(background_light);
+      background_light.appendChild(ul);
+      ul.appendChild(list);
+      ul.appendChild(number);
+      ul.appendChild(posts);
+      ul.appendChild(list_sec);
+      ul.appendChild(number_sec);
+      ul.appendChild(followers);
+      ul.appendChild(list_three);
+      ul.appendChild(number_three);
+      ul.appendChild(following);
+ul.appendChild(follow);
+
+      background.classlist.add(
+        "bg-white",
+        "shadow",
+        "rounded",
+        "overflow-hidden"
+      );
+      cover.classlist.add("px-4", "pt-0", "pb-4", "cover");
+      item_center.classlist.add("align-items-center");
+      profile_img.classlist.add("rounded", "mb-2", "img-thumbnail");
+      profile_name.classlist.add("h4");
+      email.classlist.add("p");
+      background_light.classlist.add(
+        "bg-light",
+        "p-4",
+        "d-flex",
+        "justify-content-end",
+        "text-center"
+      );
+      ul.classlist.add("list-inline", "mb-0");
+      list.classlist.add("list-inline-item");
+      number.classlist.add("font-weight-bold", "mb-0", "d-block");
+      posts.classlist.add("text-muted");
+      list_sec.classlist.add("list-inline-item");
+      number_sec.classlist.add("font-weight-bold", "mb-0", "d-block");
+      followers.classlist.add("text-muted");
+      list_three.classlist.add("list-inline-item");
+      number_three.classlist.add("font-weight-bold", "mb-0", "d-block");
+      following.classlist.add("text-muted");
+follow.classlist.add("button");
+
+
+
+      // Div_container.appendChild(background);
+      // background.appendChild(item_center);
+      // item_center.appendChild(profile_img);
+      // item_center.appendChild(profile_name);
+      // item_center.appendChild(email);
+      // item_center.appendChild(background_light);
